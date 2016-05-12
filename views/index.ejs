@@ -1,0 +1,60 @@
+<html>
+<head>
+<title>Index</title>
+    
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
+    <style>
+    </style>
+    <script type ="text/javascript">
+        $(document).ready(function (){
+
+           
+        });
+    </script>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col s6 offset-s3">
+            <h4>Cat Friend's List</h4>
+            <table>
+                <thead>
+                    <tr>
+                        <th data-field="id">Name</th>
+                        <th data-field="name">Weight</th>
+                        <th data-field="price">Type</th>
+                        <th data-field="">remove</th>
+                    </tr>
+                </thead>
+                <tbody>
+                
+                  <% for(var a in cats){ %>
+                  <tr>
+                    <td><a href="/show/cat/<%= cats[a]._id%>"><%= cats[a].name%></a></td>
+                    <td><%= cats[a].weight%></td>
+                    <td><%= cats[a].type%></td>
+                    <td><button class="waves-effect waves-light btn white">
+
+
+                    <a href="/cat/remove/<%= cats[a]._id%>">
+                        
+                        remove
+                        </a></button></td>
+                  <tr>
+                  <% }%>
+                </tbody>
+            </table>
+
+
+            <a href="/cats/new"><button class="waves-effect waves-light btn">Add New Cat!</button></a>
+        </div>
+    </div>
+</div>    
+</body>
+</html>

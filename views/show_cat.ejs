@@ -1,0 +1,26 @@
+<html>
+<head>
+<title>Show Cat</title>
+    
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
+   
+</head>
+<body>
+<div class="container">
+<%= cat_info.name%>
+<br>
+<%= cat_info.weight%>
+<br>
+<%= cat_info.type%>
+<br>
+<a href="/">back</a>
+<a href="/edit/cat/<%= cat_info._id%>">edit</a>
+</div>    
+</body>
+</html>
